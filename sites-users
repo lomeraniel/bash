@@ -1,0 +1,6 @@
+for i in {1..67}
+do
+    echo %i
+    echo $i >> users.csv
+    wp user list --format=csv --url=$(wp site url $i) >> users.csv
+done
